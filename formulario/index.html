@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+
+<body>
+
+    <main>
+        <section class="contato">
+
+            <div class="hero">
+                <h1 class="titulo">ficou com dúvida?<br> nos mande uma mensagem!</h1>
+                <p class="texto">
+                    Caso tenha ficado com qualquer dúvida basta nos mandar uma mensagem e entraremos em contato em menos
+                    de 24h.
+                </p>
+            </div>
+
+            <form class="formulario">
+                <fieldset class="box"> 
+                    <ul class="itens">
+                        <li class="item">
+                            <input autofocus type="text" class="field" name="nome" autocomplete="off" placeholder="Nome completo*">
+                            <span class="fieldNotFilled">Campo obrigatório</span>
+                        </li>
+                        <li class="item">
+                            <input type="email" class="field " name="email" autocomplete="off" placeholder="Email*">
+                            <span class="fieldNotFilled">Campo obrigatório</span>
+                        </li>
+                        <li class="item">
+                            <input type="tel" class="field" name="telefone" placeholder="Telefone*">
+                            <span class="fieldNotFilled">Campo obrigatório</span>
+                        </li>
+                        <li class="item">
+                            <textarea class="mensagem" name="campo-mensagem" placeholder="Mensagem*"></textarea>
+                            <span class="fieldNotFilledTextArea">Campo obrigatório</span>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <p class="aviso">*Campos obrigatórios</p>
+
+                <button type="submit" id="btn-enviar">Enviar</button>
+               
+            </form>
+        </section>
+    </main>
+
+    <script type="text/javascript" src="./src/js/index.js"></script>
+</body>
+
+</html>

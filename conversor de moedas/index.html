@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas</title>
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+
+
+</head>
+
+<body>
+
+    <main class="conversor">
+
+        <div class="informacoes">
+            <h1 class="titulo">Conversor de Moedas</h1>
+
+            <label for="inValor">Por favor, informe o valor que deseja converter:</label>
+            <input type="number" id="inValor" step="0.01" placeholder="Insira o valor a ser convertido">
+        </div>
+
+        <div class="moedas">
+            <label for="inMoedaOrigem">Moeda de Origem:</label>
+            <input type="text" id="inMoedaOrigem" placeholder="Ex: USD">
+
+            <label for="inMoedaDestino">Moeda de Destino:</label>
+            <input type="text" id="inMoedaDestino" placeholder="Ex: BRL">
+        </div>
+
+        <button class="btn-calcular">Calcular</button>
+    </main>
+
+    <div id="resultado"></div>
+    
+
+    <script src="./index.js"></script>
+
+</html>

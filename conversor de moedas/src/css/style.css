@@ -1,0 +1,21 @@
+.conversor {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.conversor .informacoes{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+}
+
+.conversor .informacoes .titulo {
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 10px;
+}

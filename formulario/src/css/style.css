@@ -1,0 +1,147 @@
+body {
+    background-image: url(../images/bg-repeat.jpg);
+    background-size: contain;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.contato {
+    width: 800px;
+    height: 402px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contato .hero {
+    width: 300px;
+}
+
+.contato .hero .titulo {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2rem;
+    color: #fff;
+    line-height: 24px;
+    margin-bottom: 11px;
+}
+
+.contato .hero .texto {
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 18px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 340px;
+    height: 378px;
+    background-color: #fff;
+    padding: 20px;
+    margin-left: 60px;
+    box-shadow: 0 27px 49px -25px rgba(0, 0, 0, 0.3);
+}
+
+.box {
+    border: none;
+}
+
+.formulario .box .itens {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.itens .item .field {
+    width: 298px;
+    height: 35px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid;
+    padding-left: 3%;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.itens .item .mensagem {
+    width: 298px;
+    height: 100px;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 15px;
+    border: 1px solid black;
+    padding-left: 3%;
+}
+
+.itens .item .mensagem::placeholder {
+    position: absolute;
+    top: 9%;
+}
+
+.formulario .aviso {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 20px;
+    padding: 5px 140px 5px 0;
+}
+
+.formulario #btn-enviar {
+    width: 298px;
+    height: 42px;
+    background-color: #3CCC87;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.formulario .box  .itens .item .fieldNotFilled {
+    font-size: 8px;
+    font-weight: 400;
+    color: #F52E2E;
+    padding-bottom: 5px;
+    margin-top: -15px;
+    display: none;
+}
+
+.formulario .box .itens .item .fieldNotFilledTextArea{
+    font-size: 8px;
+    padding-right: 220px;
+    font-weight: 400;
+    color: #F52E2E;
+    display: none;
+}
+
+.formulario .box .itens .item .preenchido,
+.formulario .box .itens .item.mensagem {
+    border: 2px solid
+    #00C22B;
+}
+
+.formulario .box .itens .item .naoPreenchido,
+.formulario .box .itens .item.mensagem {
+    border: 1px solid
+    #F52E2E;
+}
+
+
+
+
+
+
+
