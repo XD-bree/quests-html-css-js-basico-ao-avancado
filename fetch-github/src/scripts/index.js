@@ -1,18 +1,17 @@
-import { getUser } from '/src/scripts/services/user.js'
-import { getRepositories } from '/src/scripts/services/repositories.js'
+import { getUser } from "/src/scripts/services/user.js"
+import { getRepositories } from "/src/scripts/services/repositories.js"
+import { getEvents } from "/src/scripts/services/events.js"
 
-import { user } from '/src/scripts/objects/user.js'
-import { screen } from '/src/scripts/objects/screen.js'
+import { user } from "/src/scripts/objects/user.js"
+import { screen } from "/src/scripts/objects/screen.js"
 
-document.getElementById('btn-search').addEventListener("click", () => { // Adicona um "Escutador" de evento click no botão
-    const userName = document.getElementById("input-search").value // Obtém o valor inserido no input pelo usuário
+document.getElementById('btn-search').addEventListener('click', () => {
+    const userName = document.getElementById('input-search').value
     if(validateEmptyInput(userName)) return
-    getUserData(userName) // Executa a função recebendo o valor do input armazenado na variável "userName" como parametro
-    getUserFollowers(userName)
-    getUserFollowing(userName)
+    getUserData(userName)
 })
 
-document.getElementById('input-search').addEventListener('keyup', (e) => { 
+document.getElementById('input-search').addEventListener('keydown', (e) => {
     const userName = e.target.value
     const key = e.which || e.keyCode
     const isEnterKeyPressed = key === 13
@@ -21,17 +20,16 @@ document.getElementById('input-search').addEventListener('keyup', (e) => {
         if(validateEmptyInput(userName)) return
         getUserData(userName)
     }
-
 })
 
-function validateEmptyInput (userName) {
+function validateEmptyInput(userName) {
     if (userName.length === 0) {
-        ('Preencha o campo de busca corretamente!')
+        alert('Preencha o campo corretamente!')
         return true
     }
 }
 
-async function getUserData (userName) {
+async function getUserData(userName) {
 
     const userResponse = await getUser(userName)
 
@@ -41,13 +39,17 @@ async function getUserData (userName) {
     }
 
     const repositoriesResponse = await getRepositories(userName)
-   
+    const eventsResponse = await getEvents(userName)
+
 
     user.setInfo(userResponse)
     user.setRepositories(repositoriesResponse)
-    screen.renderUser(user)
-}
+    user.setEvents(eventsResponse)
 
+    console.log(user)
+
+    screen.renderUser(user)   
+}
 
 
 

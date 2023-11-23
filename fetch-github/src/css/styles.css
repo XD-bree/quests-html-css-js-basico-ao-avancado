@@ -121,6 +121,18 @@ main {
   line-height: 23px;
 }
 
+.profile-numbers {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+
+
 /* REPOSITORIES */
 
 .container .profile-data .repositories h2{
@@ -152,6 +164,36 @@ main {
   display: none;
 }
 
+/* EVENTS */
+
+.container .profile-data .events {
+  background-color: #24292e;
+  color: #fff;
+  border-radius: 25px;
+}
+
+.container .profile-data .events h2 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.container .profile-data .events p {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.container .profile-data .events ul li {
+  padding: 15px;
+}
+
+.container .profile-data .events span {
+  font-size: 10px;
+}
+
+
+
+
+
 @media (max-width: 1280px) {
   .container {
     flex-direction: column;
@@ -168,6 +210,8 @@ main {
     text-align: center;
   }
 }
+
+
 
 @media (max-width: 768px) {
   .container header #input-search,
